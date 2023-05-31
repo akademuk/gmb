@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/Favicon.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Seymour+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+
+    <div class="popup">
+        <div class="popup-content">
+            <p>Для улучшения работы сайта и взаимодействия с пользователями мы используем файлы cookie. Продолжая работу
+                с сайтом, Вы разрешаете использование cookie-файлов и соглашаетесь на сбор, обработку и передачу личных
+                данных. Подробнее Вы всегда можете отключить файлы cookie в настройках.</p>
+            <button class="close-btn">Принять</button>
+        </div>
+    </div>
+
+    <div class="modalWindow">
+        <div class="modalWindowContent">
+            <div class="modalWindowContentBord modalWindowContentBord2">
+                <div class="popupScrollCloses">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.8798 19.1822L9.93994 10.561L1.31881 19.5009" stroke="#40D9DF" stroke-width="2"/>
+                        <path d="M1.0001 1.9399L9.93994 10.561L18.5611 1.62119" stroke="#40D9DF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="popupScroll modalWindowC">
+                    <h2>Заблокувати номер:</h2>
+                    <p>Для того, щоб вас виключили з розсилки, введіть, <br>
+                        будь ласка, свій номер мобільного телефону.</p>
+                    <form class="modalForms" id="blockNumber">
+                        <div class="formFlex">
+                            <div class="inputTel">
+                                <label for="tel2">Ваш номер телефону </label>
+                                <input type="tel" id="tel2" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
+                                <span class="validation">Вкажіть діючий номер</span>
+                            </div>
+                            <div class="rekaptcha">
+                                <img src="img/recaptha.png" alt="">
+                            </div>
+                        </div>
+                        <div class="inputSub">
+                           <div class="inputSub2">
+                                <input type="submit" value="Відправити" class="inputSubInput">
+                           </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modalForm">
+        <div class="modalWindowContent">
+            <div class="modalWindowContentBord">
+                <div class="popupScrollCloses">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.8798 19.1822L9.93994 10.561L1.31881 19.5009" stroke="#40D9DF" stroke-width="2"/>
+                        <path d="M1.0001 1.9399L9.93994 10.561L18.5611 1.62119" stroke="#40D9DF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="modalFormContent2">
+                    <h2>Дякуємо!!</h2>
+                    <p>Терпіння! Ми отримали ваш номер у роботу <br> і якнайшвидше виключимо його з розсилки.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="politicModal" class="politicModal">
+        <div class="politicModalContent">
+            <div class="popupScrollCloses popupScrollCloses3">
+                <svg width="20" height="36" viewBox="0 0 20 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.8793 26.1821L9.93945 17.561L1.31832 26.5008" stroke="#40D9DF" stroke-width="2"/>
+                    <path d="M0.999611 8.93984L9.93945 17.561L18.5606 8.62113" stroke="#40D9DF" stroke-width="2"/>
+                </svg>    
+            </div>
+            <div class="modal-content">
+               <div class="modal-content-scroll">
+                <div class="politicScrollText">
+                    <div class="politicScroll">
+                        <b>Политика конфиденциальности и обработки персональных данных</b> <br>
+                        Настоящая Политика конфиденциальности персональных данных (далее – «Политика конфиденциальности»)
+                        действует в отношении всей информации, которая, расположена на доменном имени https://kzmoney/kz./,
+                        а также может быть получена от Пользователя во время использования официального сайта с целью
+                        получения услуг, программ и продуктов, рекламируемых на сайте.
+                        <br><br>
+                        <b>ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</b> <br>
+                        1.1 В настоящей Политике конфиденциальности используются следующие термины:<br>
+                        1.1.1. «Администрация официального сайта (далее –Администрация сайта)» – уполномоченные сотрудники
+                        управления сайтом, действующие от имени лица, которое организует и (или) осуществляет обработку
+                        персональных данных, а также определяет цели обработки персональных данных, состав персональных
+                        данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.<br>
+                        1.1.2. «Персональные данные» — любая информация, относящаяся прямо или косвенно к определенному
+                        физическому лицу (субъекту персональных данных).<br>
+                        1.1.3. «Обработка персональных данных» — любое действие (операция) или совокупность действий
+                        (операций), совершаемых с использованием средств автоматизации или без использования таких средств с
+                        персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение
+                        (обновление, изменение), извлечение, использование, передачу (распространение, предоставление,
+                        доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.<br>
+                        1.1.4. «Конфиденциальность персональных данных» — обязательное для соблюдения Оператором или иным
+                        получившим доступ к персональным данным лицом требование не допускать их распространения без
+                        согласия субъекта персональных данных или наличия иного законного основания.<br>
+                        1.1.5. «Пользователь официального сайта (далее –Пользователь)» – лицо, имеющее доступ к Сайту,
+                        посредством сети Интернет и использующее Сайт.<br>
+                        1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере
+                        пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе
+                        при попытке открыть страницу соответствующего сайта.<br>
+                        1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.<br><br>
+    
+                        <b>ОБЩИЕ ПОЛОЖЕНИЯ</b><br>
+                        2.1. Использование Пользователем сайта означает его согласие с настоящей Политикой
+                        конфиденциальности и условиями обработки персональных данных Пользователя на законных основаниях.<br>
+                        2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить
+                        использование сайта.<br>
+                        2.3. Настоящая Политика конфиденциальности применяется только к сайту. Мы не контролируем и не несём
+                        ответственности за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на
+                        сайте.<br>
+                        2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых
+                        Пользователем сайта.<br><br>
+    
+                        <b>ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</b><br>
+                        3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по
+                        неразглашению и обеспечению режима защиты конфиденциальности персональных данных, которые
+                        Пользователь предоставляет при регистрации в социальной сети Facebook или при оформлении заказа для
+                        приобретения у третьих лиц услуг онлайн кредитования, рекламируемых на сайте.<br>
+                        3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+                        предоставляются Пользователем путём заполнения регистрационной формы, размещенной в социальной сети
+                        Facebook с последующим переходом по ссылке на Сайт и включают в себя следующую информацию:<br>
+                        3.2.1. фамилию, имя, отчество Пользователя;<br>
+                        3.2.2. контактный телефон Пользователя;<br>
+                        3.2.3. адрес электронной почты (e-mail);<br>
+                        3.2.4. адрес места нахождения Пользователя;<br>
+                        3.3. Мы защищает Данные, которые автоматически передаются в процессе просмотра рекламных блоков и
+                        при посещении страниц, на которых установлен статистический скрипт системы («пиксель»):<br>
+                        IP адрес;<br>
+                        информация из cookies;<br>
+                        информация о браузере (или иной программе, которая осуществляет доступ к демонстрации рекламы);<br>
+                        время доступа;<br>
+                        адрес страницы Фейсбук, на которой расположен рекламный блок;<br>
+                        реферер (адрес предыдущей страницы).<br>
+                        3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта, требующим авторизации.<br>
+                        3.3.2. Мы осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация
+                        используется с целью выявления и решения технических задач.<br>
+                        3.4. Любая иная персональная информация неоговоренная выше (используемые браузеры, операционные
+                        системы и т.д.) подлежит надежному хранению и нераспространению, за исключением случаев,
+                        предусмотренных в п. п. 5.2. и 5.3. настоящей Политики конфиденциальности.<br><br>
+    
+                        <b>ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</b><br>
+                        4.1. Персональные данные Пользователя Администрация сайта может использовать в целях:<br>
+                        4.1.1. Идентификации Пользователя, зарегистрированного на Facebook, для оформления заказа и (или)
+                        заключения гражданско-правового договора о получении услуг по онлайн кредитованию дистанционным
+                        способом (далее – «Договор») с третьими лицами, предоставляющими эти услуги.<br>
+                        4.1.2. Предоставления Пользователю доступа к основным ресурсам Сайта, а также предоставление
+                        возможности участия в акциях и исследованиях в рамках направленной деятельности или получения иного
+                        способа взаимодействия с третьими лицами, предоставляющими услуги.<br>
+                        4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов,
+                        касающихся использования Сайта, оказания услуг, обработка запросов и заявок от Пользователя.<br>
+                        4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения
+                        мошенничества.<br>
+                        4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.<br>
+                        4.1.6. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении
+                        проблем, связанных с использованием Сайта.<br>
+                        4.1.7. Предоставления Пользователю с его согласия, обновлённой информации, специальных предложений,
+                        новостной рассылки и иных сведений от нас или от имени партнеров.<br>
+                        4.1.8. Осуществления рекламной деятельности с согласия Пользователя и в соответствии с
+                        законодательством Республики Казахстан о рекламе.<br>
+                        4.1.9. Предоставления доступа Пользователю на сайты или сервисы партнеров с целью получения услуг по
+                        онлайн кредитованию удаленным способом.<br><br>
+    
+                        <b>СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</b><br>
+                        5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным
+                        способом, в том числе в информационных системах персональных данных с использованием средств
+                        автоматизации или без использования таких средств.<br>
+                        5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные
+                        третьим лицам, в частности операторам электросвязи, другим физическим и юридическим лицам
+                        исключительно в целях предоставления услуг Пользователю по Договору, оформленом на Сайте третьих
+                        лиц, предоставляющих услуги онлайн кредитования удалённым способом.<br>
+                        5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной
+                        власти Республики Казахстан только по основаниям и в порядке, установленным законодательством
+                        Республики Казахстан.<br>
+                        5.4. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об
+                        утрате или разглашении персональных данных.<br>
+                        5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты
+                        персональной информации Пользователя от неправомерного или случайного доступа, уничтожения,
+                        изменения, блокирования, копирования, распространения, а также от иных неправомерных действий
+                        третьих лиц.<br>
+                        5.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению
+                        убытков или иных отрицательных последствий, вызванных утратой или разглашением персональных данных
+                        Пользователя.<br><br>
+    
+                        <b>  ОБЯЗАТЕЛЬСТВА СТОРОН</b> <br>
+                        6.1. Пользователь обязан:<br>
+                        6.1.1. Предоставить достоверную информацию о персональных данных, необходимую для пользования
+                        Сайтом.<br>
+                        6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае изменения
+                        данной информации.<br>
+                        6.2. Администрация сайта обязана:<br>
+                        6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей
+                        Политики конфиденциальности.<br>
+                        6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного
+                        письменного разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо
+                        разглашение иными возможными способами переданных персональных данных Пользователя, за исключением
+                        п. п. 5.2. и 5.3. настоящей Политики Конфиденциальности.<br>
+                        6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных
+                        Пользователя согласно порядку, обычно используемого для защиты такого рода информации в существующем
+                        деловом обороте.<br>
+                        6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с
+                        момента обращения или запроса Пользователя или его законного представителя либо уполномоченного
+                        органа по защите прав субъектов персональных данных на период проверки, в случае выявления
+                        недостоверных персональных данных или неправомерных действий.<br><br>
+    
+                        <b>ОТВЕТСТВЕННОСТЬ СТОРОН</b><br>
+                        7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки,
+                        понесённые Пользователем в связи с неправомерным использованием персональных данных, в соответствии
+                        с законодательством Республики Казахстан, за исключением случаев, предусмотренных п. п. 5.2., 5.3. и
+                        7.2. настоящей Политики Конфиденциальности.<br>
+                        7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт
+                        ответственность, если данная конфиденциальная информация:<br>
+                        7.2.1. Стала публичным достоянием до её утраты или разглашения.<br>
+                        7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.<br>
+                        7.2.3. Была разглашена с согласия Пользователя.<br><br>
+    
+                        <b>8. РАЗРЕШЕНИЕ СПОРОВ</b><br>
+    
+                        8.1. В случае возникновения вопросов, замечаний и/или претензий в связи с конфиденциальностью
+                        Пользователь вправе направить запрос на электронный адрес: info.zaimer2022@gmail.com<br>
+                        8.2. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта и
+                        Администрацией сайта, обязательным является предъявление претензии (письменного предложения о
+                        добровольном урегулировании спора).<br>
+                        8.3. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно
+                        уведомляет заявителя претензии о результатах рассмотрения претензии.<br>
+                        8.4. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии
+                        с действующим законодательством Республики Казахстан.<br>
+                        8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта
+                        применяется действующее законодательство Республики Казахстан.<br><br>
+    
+                        <b>ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</b><br>
+                        9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без
+                        согласия Пользователя.<br>
+                        9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное
+                        не предусмотрено новой редакцией Политики конфиденциальности.<br>
+                        9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать указав
+                        раздел сайта.<br>
+    
+                        Я ознакомлен (а) и полностью согласен (а) с этими условиями Политики конфиденциальности и обработки
+                        персональных данных и настоящим даю разрешение на использование и обработку моих персональных данных
+                        на законных основаниях.
+    
+    
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <header>
+        <div class="lineYellow"></div>
+        <div class="lineRed"></div>
+        <div class="headerContainer">
+            <div class="headerContainerLeft">
+                <img src="img/headerIcon1.svg" alt="icons">
+                <img src="img/headerIcon2.svg" alt="icons">
+            </div>
+
+            <div class="headerContainerCenter">
+                <a href="#">
+                    <img src="img/Logo.svg" alt="logo">
+                </a>
+            </div>
+
+
+            <div class="headerContainerRight">
+                
+                <img src="img/headerIcon4.svg" alt="icons">
+                <img src="img/headerIcon6.svg" alt="icons">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="mainIconGroup">
+                <img src="img/mainIcon1.svg" alt="icons1">
+                <img src="img/mainIcon2.svg" alt="icons1">
+                <img src="img/mainIcon3.svg" alt="icons1">
+                <img src="img/mainIcon4.svg" alt="icons1">
+                <img src="img/mainIcon5.svg" alt="icons1">
+                <img src="img/mainIcon9.svg" alt="icons1">
+            </div>
+            <div class="mainCardContainer">
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo1.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Шансуй щодня</p>
+                        <span>У столиці розваг</span>
+                    </div>
+
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo2.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Почни шлях перемоги </p>
+                        <span>100 000₴ + 525 FS</span>
+                    </div>
+
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo3.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Почни шлях перемоги </p>
+                        <span>100 000₴ + 525 FS</span>
+                    </div>
+
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo4.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Шансуй щодня</p>
+                        <span>У столиці розваг</span>
+                    </div>
+
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo5.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Почни шлях перемоги </p>
+                        <span>100 000₴ + 525 FS</span>
+                    </div>
+
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+
+                <div class="mainCard">
+                    <div class="mainCardPromocod">
+                        <button>*Промокод*</button>
+                    </div>
+                 
+                    <div class="mainCardStarsAnimation">
+                        <div class="mainCardStars">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                            <img src="img/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="mainCardLogo">
+                        <img src="img/cardLogo6.svg" alt="logo">
+                    </div>
+
+                    <div class="mainCardText">
+                        <p>Шансуй щодня </p>
+                        <span>У столиці розваг</span>
+                    </div>
+                    <button>
+                        <span>Грати</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mainForm">
+                <div class="mainFormBord">
+                    <h2>Залишити свої контакти :</h2>
+                    <form action="" id="apply">
+                        <div class="formLeft">
+                            <label for="name">
+                                Ваше Iм’я 
+                            </label>
+                            <input type="text" id="name" placeholder=" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ">
+                            <label for="tel">
+                                Ваш номер телефону 
+                            </label>
+                            <input type="tel" id="tel" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
+                        </div>
+                        <div class="formRight">
+                            <div class="formRightSubmit">
+                                <input type="submit" value="Відправити" class="modalFormContent-open">
+                            </div>
+                            <div class="linkPolicy">
+                                Реєструючись, ви погоджуєтесь
+                            <button id="politicOpen">з угодою користувача. </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mainText">
+                        <h3>21+</h3>
+                        <p>
+                            Ви повинні дотримуватись усіх вікових та інших нормативних вимог перед тим як увійти у казино або поставити ставку.     
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mainIconGroup2">
+                <img src="img/mainIcon6.svg" alt="icons">
+                <img src="img/mainIcon7.svg" alt="icons">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footerTop">
+                <p>Ми в соціальних мережах:</p>
+                <div class="footerTopSocial">
+                    <a href="#">
+                        <img src="img/viber.svg" alt="telegram">
+                    </a>
+                    <a href="#">
+                        <img src="img/telegram.svg" alt="viber">
+                    </a>
+                </div>
+            </div>
+            <div class="footerLineYellow"></div>
+            <div class="footerLineRed"></div>
+            <div class="footerBottom">
+                <button>
+                    <span class="open-popup">Заблокувати номер</span>
+                </button>
+                <img src="img/footerIcon.svg" alt="">
+            </div>
+        </div>
+        <!-- <div class="containerDownload">
+            <button>СКАЧАТИ ДОДОТОК</button>
+        </div> -->
+    </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="script/modalForm.js"></script>
+    <script src="script/modalWindow.js"></script>
+    <script src="script/popap.js"></script>
+    
+    <script>
+        // Выбираем поле ввода телефона по его ID
+        const phoneInput = document.querySelector('#tel');
+        const phoneInput2 = document.querySelector('#tel2');
+
+        // Инициализируем маску для телефона, используя библиотеку Inputmask
+        Inputmask({ mask: '+38 (9 9 9) 9 9 9 9 9 9 9' }).mask(phoneInput);
+        Inputmask({ mask: '+38 (9 9 9) 9 9 9 9 9 9 9' }).mask(phoneInput2);
+    </script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var link = document.getElementById('politicOpen');
+  var modal = document.getElementById('politicModal');
+  var closeBtns = document.querySelectorAll('.popupScrollCloses');
+  var body1 = document.querySelector('.body');
+
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = "block";
+    modal.classList.add('active');
+    body1.classList.add('active');
+  });
+
+  closeBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      modal.style.display = "none";
+      modal.classList.remove('active');
+      body1.classList.remove('active');
+    });
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      modal.classList.remove('active');
+      body1.classList.remove('active');
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>
