@@ -146,11 +146,6 @@
     </div>
 
 
-
-
-
-
-
     <header>
         <div class="lineYellow"></div>
         <div class="lineRed"></div>
@@ -188,7 +183,8 @@
             <div class="mainCardContainer">
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -225,7 +221,8 @@
 
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -262,7 +259,8 @@
 
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -299,7 +297,8 @@
 
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -336,7 +335,8 @@
 
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -373,7 +373,8 @@
 
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button>*Промокод*</button>
+                        <button onclick="generatePromoCode(this)">*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -526,6 +527,29 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+</script>
+
+<script>
+  function generatePromoCode(button) {
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var promoCode = '';
+
+        for (var i = 0; i < 10; i++) {
+            var randomIndex = Math.floor(Math.random() * characters.length);
+            promoCode += characters.charAt(randomIndex);
+        }
+
+        button.innerHTML = promoCode;
+
+        navigator.clipboard.writeText(promoCode)
+            .then(function() {
+                console.log('Промокод скопирован в буфер обмена: ', promoCode);
+                alert('Промокод скопирован: ' + promoCode);
+            })
+            .catch(function(error) {
+                console.error('Ошибка копирования: ', error);
+            });
+    }
 </script>
 </body>
 </html>

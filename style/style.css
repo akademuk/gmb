@@ -93,7 +93,9 @@ main {
   margin-bottom: 30px;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s;
 }
+
 .mainCard:nth-of-type(4n) {
   margin-right: 0;
 }
@@ -228,9 +230,7 @@ main {
   height: 100%;
   z-index: -1;
 }
-.mainCard:hover::after {
-  background: #00FFD1;
-}
+
 .mainForm {
   background: linear-gradient(to bottom, #7AFFD8 50%, #FFF859 100%);
   display: flex;
@@ -342,6 +342,7 @@ main {
   font-size: 14px;
   line-height: 27px;
   color: #F5F5F5;
+  transition: all 0.5s;
   background: linear-gradient(0deg, #13A89D -0.02%, #4CD1F6 100%);
   width: 258px;
   height: 53px;
@@ -1045,13 +1046,32 @@ main .wrapper {
   box-sizing: border-box;
   margin-top: 50px;
 }
-
-
-
-
-
-
-
+.mainCard:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+.mainCard:hover:after {
+  content: none;
+}
+.mainCard > button:hover span {
+  background: linear-gradient(180deg, #25A6C6 0%, #0F7774 100%);
+  transition: all 0.3s;
+}
+.mainCard > button:active {
+    transform: translateY(15px);
+    transition: all 0.3s;
+} 
+.formRightSubmit:hover input {
+  transition: all 0.5s;
+  background: linear-gradient(0deg, #0A6861 -0.02%, #28A7CB 100%);
+}
+.formRightSubmit:active {
+  transition: all 0.5s;
+  transform: translateY(15px);
+}
+.popupScrollCloses {
+  cursor: pointer;
+}
 
 
 
@@ -1166,7 +1186,10 @@ main .wrapper {
     right: -22px;
     bottom: 73px;
   }
-
+  .mainCard:hover {
+    transform: none;
+    transition: all 0.3s;
+  }
   .mainForm {
     position: relative;
     z-index: 10;
