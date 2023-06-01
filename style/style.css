@@ -11,6 +11,12 @@ body {
   background: #11052C;
   font-family: 'Montserrat', sans-serif;
 }
+input {
+  font-family: 'Montserrat', sans-serif !important;
+}
+button {
+  font-family: 'Montserrat', sans-serif !important;
+}
 .body.active {
   overflow: hidden;
 }
@@ -99,37 +105,37 @@ main {
   margin-right: 0;
 }
 .mainCard:nth-of-type(1) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, #150833 90%), url(../img/Banner1.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(2) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.1) 40.09%, #150833 90%), url(../img/Banner2.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.1) 30%, #150833 90%), url(../img/Banner2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(3) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, #150833 90%), url(../img/Banner3.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(4) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, #150833 90%), url(../img/Banner4.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner4.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(5) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, #150833 90%), url(../img/Banner5.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner5.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(6) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, #150833 90%), url(../img/Banner6.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -157,6 +163,7 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: -5px;
 
 }
 .mainCardPromocod button:nth-of-type(1):active {
@@ -370,7 +377,7 @@ main {
   z-index: -1;
 }
 .linkPolicy {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   color: #EDFFFE;
@@ -379,7 +386,7 @@ main {
   margin: 0 auto;
 }
 .linkPolicy button {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 10px;
   line-height: 14px;
   background: transparent;
@@ -402,7 +409,7 @@ main {
   margin-left: 5px;
 }
 .mainText p {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 10px;
   line-height: 20px;
   color: #FFFFFF;
@@ -1110,7 +1117,9 @@ main .wrapper {
 .mainCard:hover .mainCardPromocod button:nth-of-type(1):after {
   background: transparent;
 }
-
+.modalWindowContentBord2 {
+  background: #27B6BC !important;
+}
 
 
 
@@ -1555,6 +1564,10 @@ main .wrapper {
     width: 13px;
     object-fit: cover;
     height: 13px;
+  }
+  .popupScrollCloses3 {
+    width: 25px;
+    height: 25px;
   }
 }
 
