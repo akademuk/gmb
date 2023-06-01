@@ -38,7 +38,7 @@
                         <div class="formFlex">
                             <div class="inputTel">
                                 <label for="tel2">Ваш номер телефону </label>
-                                <input type="tel" id="tel2" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
+                                <input type="tel" id="tel2" name="phone" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
                                 <span class="validation">Вкажіть діючий номер</span>
                             </div>
                             <div class="rekaptcha">
@@ -183,8 +183,8 @@
             <div class="mainCardContainer">
                 <div class="mainCard">
                     <div class="mainCardPromocod">
-                        <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button >*Промокод*</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -222,7 +222,7 @@
                 <div class="mainCard">
                     <div class="mainCardPromocod">
                         <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -260,7 +260,7 @@
                 <div class="mainCard">
                     <div class="mainCardPromocod">
                         <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -298,7 +298,7 @@
                 <div class="mainCard">
                     <div class="mainCardPromocod">
                         <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -336,7 +336,7 @@
                 <div class="mainCard">
                     <div class="mainCardPromocod">
                         <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -374,7 +374,7 @@
                 <div class="mainCard">
                     <div class="mainCardPromocod">
                         <button onclick="generatePromoCode(this)">*Промокод*</button>
-                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;">Скопировать</button>
+                        <button class="copyButton" onclick="copyPromoCode(this)" style="display: none;"></button>
                     </div>
                  
                     <div class="mainCardStarsAnimation">
@@ -416,15 +416,15 @@
                             <label for="name">
                                 Ваше Iм’я 
                             </label>
-                            <input type="text" id="name" placeholder=" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ">
+                            <input type="text" id="name" name="name" placeholder=" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " required>
                             <label for="tel">
                                 Ваш номер телефону 
                             </label>
-                            <input type="tel" id="tel" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
+                            <input type="tel" id="tel" name="phone" placeholder="+38 (_ _ _) _ _ _ _ _ _ _" required>
                         </div>
                         <div class="formRight">
                             <div class="formRightSubmit">
-                                <input type="submit" value="Відправити" class="modalFormContent-open">
+                                <input type="submit" value="Відправити">
                             </div>
                             <div class="linkPolicy">
                                 Реєструючись, ви погоджуєтесь
@@ -479,9 +479,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.2.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="script/jquery.validate.min.js"></script>
     <script src="script/modalForm.js"></script>
     <script src="script/modalWindow.js"></script>
     <script src="script/popap.js"></script>
+    <script src="script/contactform.js"></script>
     
     <script>
         // Выбираем поле ввода телефона по его ID
@@ -530,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 <script>
-  function generatePromoCode(button) {
+     function generatePromoCode(button) {
         var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var promoCode = '';
 
@@ -543,8 +545,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         navigator.clipboard.writeText(promoCode)
             .then(function() {
+                var copyMessage = button.nextElementSibling;
+                copyMessage.style.display = 'inline';
                 console.log('Промокод скопирован в буфер обмена: ', promoCode);
-                alert('Промокод скопирован: ' + promoCode);
+                setTimeout(function() {
+                    copyMessage.style.display = 'none';
+                }, 1000);
             })
             .catch(function(error) {
                 console.error('Ошибка копирования: ', error);

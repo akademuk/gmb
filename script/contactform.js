@@ -1,10 +1,8 @@
 jQuery(document).ready(function ($) {
 
     // маска телефона
-    var popupScrollForm = document.querySelector('.popupScrollForm');
-    var popupScroll2Form = document.querySelector('.popupScroll2Form');
-    var popupScroll2 = document.querySelector('.popupScroll2');
-    var popupScroll = document.querySelector('.popupScroll');
+    let modalForm = document.querySelector('.modalForm');
+    let body1 = document.querySelector('.body');
     // добавляем адрес в форму (для рекламы)
     // let fullURL = window.location.href;
     // sessionStorage.setItem('fullURL', fullURL);
@@ -26,17 +24,19 @@ jQuery(document).ready(function ($) {
 
             $.ajax({
                 type: "POST",
-                url: "contact.php",
+                url: "/contact.php",
                 data: str,
                 success: function (msg) {
                     if (msg == 'OK') {
                         result = '<div class="notification_ok">Ваше повідомлення надіслано</div>';
-                        popupScrollForm.classList.add('active');
-                        popupScroll2Form.classList.add('active');
+                        console.log("Ok");
+                        modalForm.classList.add('active');
+                        body1.classList.add('active');
                         form.reset(); 
                         /* если нужно перенаправление */
                         // window.location.href = "applicationSend.html";
                     } else {
+                        console.log("error")
                         result = msg;
                     }
                     // $('#note').html(result);
@@ -61,17 +61,19 @@ jQuery(document).ready(function ($) {
 
             $.ajax({
                 type: "POST",
-                url: "contact.php",
+                url: "/contact.php",
                 data: str,
                 success: function (msg) {
                     if (msg == 'OK') {
                         result = '<div class="notification_ok">Ваше повідомлення надіслано</div>';
-                        popupScroll.classList.add('active');
-                        popupScroll2.classList.add('active');
+                        modalForm.classList.add('active');
+                        body1.classList.add('active');
+                        console.log("Ok");
                         form.reset(); 
                         /* если нужно перенаправление */
                         // window.location.href = "applicationSend.html";
                     } else {
+                        console.log("error")
                         result = msg;
                     }
                     // $('#note2').html(result);
