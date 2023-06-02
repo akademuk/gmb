@@ -39,7 +39,7 @@
                             <div class="inputTel">
                                 <label for="tel2">Ваш номер телефону </label>
                                 <input type="tel" id="tel2" name="phone" placeholder="+38 (_ _ _) _ _ _ _ _ _ _">
-                                <span class="validation">Вкажіть діючий номер</span>
+                                <span class="validation" id="validation">Вкажіть діючий номер</span>
                             </div>
                             <div class="rekaptcha">
                                 <img src="img/recaptha.png" alt="">
@@ -83,12 +83,12 @@
                 </svg>    
             </div>
             <div class="modal-content">
+                <h3>Політика конфіденційності</h3>
+                <h4>Згода на обробку персональних даних <br>
+                    (далі - Згода)</h4>
                <div class="modal-content-scroll">
                 <div class="politicScrollText">
                     <div class="politicScroll">
-                        <h3>Політика конфіденційності</h3>
-                        <h4>Згода на обробку персональних даних <br>
-                            (далі - Згода)</h4>
                         <div class="politicScrollText">
                             <p>Продовжуючи використовувати даний сайт, я надаю свою добровільну, конкретну, інформовану і свідому згоду ТОВ «СМС ФІНАНС» (Україна, 04071, м. Київ, вул. Воздвиженська, 60-А, поверх 8) (далі – «Компанія») на обробку моїх наступних персональних даних, що збираються через сайти: https://allslots.in.ua/, https://facebook.com, https://google.com та інші (далі – «Сайт»):</p>
                             <p>Наступні відомості про мене: прізвище, ім’я та по батькові, номер телефону, адреса електронної пошти та відомості, що збираються в автоматичному режимі: ІР-адреси пристроїв, за допомогою яких відвідується Сайт, тип пристрою, дата і час відвідування Сайту, поновлення та видалення або знищення даних, відомості про дії на Сайті, в тому числі про рекламу, що переглядається, та використання сервісів Сайту, зокрема файли «cookies», а також в тому числі метричних програм (систем) Google Analytics, Google Tag Manager, Hotjar, відповідно до умов обробки, викладених у цій Згоді.</p>
@@ -456,7 +456,7 @@
                         <img src="img/viber.svg" alt="telegram">
                     </a>
                     <a href="#">
-                        <img src="img/telegram.svg" alt="viber">
+                        <img src="img/Viber2.svg" alt="viber">
                     </a>
                 </div>
             </div>
@@ -469,10 +469,10 @@
                 <img src="img/footerIcon.svg" alt="">
             </div>
         </div>
-        <!-- <div class="containerDownload">
-            <button>СКАЧАТИ ДОДОТОК</button>
-        </div> -->
     </footer>
+    <div class="containerDownload">
+        <button>СКАЧАТИ ДОДОТОК</button>
+    </div>
 
 
 
@@ -557,5 +557,75 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 </script>
+
+<script>
+// Получаем элементы формы и блока с сообщением об ошибке
+var form = document.querySelector('#blockNumber');
+var phoneInputValidation = document.querySelector('#tel2');
+var validation = document.querySelector('#validation');
+
+// Добавляем обработчик события отправки формы
+form.addEventListener('submit', function(event) {
+  // Проверяем валидность номера телефона
+  if (!isValidPhoneNumber(phoneInputValidation.value)) {
+    // Отменяем отправку формы
+    event.preventDefault();
+    
+    // Показываем блок с сообщением об ошибке
+    validation.style.display = 'block';
+  }
+});
+
+// Добавляем обработчики события input для каждого поля ввода
+phoneInputValidation.addEventListener('input', validateForm);
+// Добавьте аналогичные обработчики для других полей, если необходимо
+
+// Функция для проверки валидности номера телефона
+function isValidPhoneNumber(phoneNumber) {
+  // Проверяем, соответствует ли номер телефона заданному формату
+  var phonePattern = /^\d{10}$/; // Формат: 10 цифр без пробелов и разделителей
+  return phonePattern.test(phoneNumber);
+}
+
+// Функция для проверки заполнения всех полей формы
+function validateForm() {
+  var allFieldsFilled = true;
+  
+  // Проверяем, заполнены ли все поля формы
+  if (phoneInputValidation.value === '') {
+    allFieldsFilled = false;
+  }
+  // Добавьте аналогичные проверки для других полей, если необходимо
+  
+  // Если все поля заполнены, скрываем блок с сообщением об ошибке
+  if (allFieldsFilled) {
+    validation.style.display = 'none';
+  }
+}
+
+
+</script>
+
+    <script>
+const mainCardStarsList = document.querySelectorAll('.mainCardStars');
+
+mainCardStarsList.forEach(mainCardStars => {
+  const stars = mainCardStars.querySelectorAll('img');
+
+  const cloneStars = [...stars].map(star => star.cloneNode(true));
+  cloneStars.forEach(star => mainCardStars.appendChild(star));
+
+  const animationDuration = 4; // Продолжительность анимации в секундах
+  const fadeDuration = 1; // Продолжительность появления/исчезновения каждой картинки в секундах
+  const totalDuration = animationDuration * stars.length; // Общая продолжительность анимации для всех картинок
+
+  stars.forEach((star, index) => {
+    star.style.animationDuration = `${fadeDuration}s, ${totalDuration}s`; // Установка продолжительности анимации
+    star.style.animationDelay = `${index * fadeDuration}s, 0s`; // Установка задержки для каждой картинки
+  });
+});
+
+
+    </script>
 </body>
 </html>

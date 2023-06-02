@@ -99,43 +99,50 @@ main {
   position: relative;
   cursor: pointer;
   transition: all 0.3s;
+ 
 }
 
+.mainCard:nth-of-type(1n) {
+  box-shadow: 0px 0px 16px -5px #EF33FF;
+}
+.mainCard:nth-of-type(2n) {
+  box-shadow: 0px 0px 16px -5px #00FFD1;
+}
 .mainCard:nth-of-type(4n) {
   margin-right: 0;
 }
 .mainCard:nth-of-type(1) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner1.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(2) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.1) 30%, #150833 90%), url(../img/Banner2.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(3) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner3.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner3.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(4) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner4.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner4.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(5) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner5.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner5.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .mainCard:nth-of-type(6) {
-  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 30%, #150833 90%), url(../img/Banner6.png);
+  background: linear-gradient(180deg, rgba(17, 5, 44, 0.08) 40.09%, rgba(17, 5, 44, 0.8) 68.17%), url(../img/Banner6.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -232,19 +239,7 @@ main {
   border-radius: 30px;
   transition: all 0.3s;
 }
-.mainCard::after {
-  content: "";
-  background: transparent;
-  opacity: 0.5;
-  filter: blur(7.5px);
-  border-radius: 19px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+
 
 .mainForm {
   background: linear-gradient(to bottom, #7AFFD8 50%, #FFF859 100%);
@@ -599,46 +594,55 @@ main .wrapper {
     margin-bottom: 138px;
     overflow: hidden;
   }
-  
-  .mainCardStars {
+  .mainCardStarsAnimation {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainCardStars {
     display: flex;
     align-items: center;
     height: 16px;
-    width: 100%;
     animation: marquee linear infinite;
-    animation-duration: 20s; /* Продолжительность анимации */
+    animation-duration: 4s; /* Продолжительность анимации */
     animation-timing-function: linear; /* Функция времени анимации */
-    animation-iteration-count: infinite; /* Бесконечное повторение */
-  }
-  
-  .mainCardStars img {
+}
+
+.mainCardStars img {
     display: inline-block;
     margin-right: 10px; /* Расстояние между изображениями */
     vertical-align: middle;
-  }
-  
-  @keyframes marquee {
+    animation: fadein linear 10s infinite; /* Продолжительность анимации и бесконечное повторение */
+}
+
+@keyframes marquee {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-100%);
     }
-  }
-  
-  .politicScroll h3 {
+}
+
+
+
+
+  .modal-content h3 {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     color: #000000;
     margin-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 38px;
   }
-  .politicScroll h4 {
+  .modal-content h4 {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
     color: #000000;
     margin-bottom: 10px;
+    margin-left: 38px;
   }
 .politicScrollText p {
   font-weight: 500;
@@ -1061,7 +1065,7 @@ main .wrapper {
   width: 697px;
   padding: 0px 34px 0 38px;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .mainCard:hover {
   transform: scale(1.1);
@@ -1120,7 +1124,9 @@ main .wrapper {
 .modalWindowContentBord2 {
   background: #27B6BC !important;
 }
-
+.inputTel span {
+  display: none;
+}
 
 
 
