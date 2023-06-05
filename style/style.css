@@ -503,8 +503,6 @@ main .wrapper {
   margin-top: 5px;
 }
 .containerDownload {
-  background: #fff;
-  padding-top: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
